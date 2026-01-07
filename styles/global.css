@@ -1,0 +1,120 @@
+:root {
+  --body-color: #070915;
+  --accent-color: #d747eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100dvh;
+}
+
+/* html {
+  height: 100dvh;
+} */
+
+body {
+  background-color: var(--body-color);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.nav-wrapper {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2rem;
+  place-items: center;
+}
+
+.header-logo {
+  flex: 40%;
+  padding-left: 2%;
+  margin: auto;
+}
+
+.nav-menu-list {
+  flex: 60%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 5%;
+}
+
+.nav-menu-item {
+  /* font-family: 'Google Sans Code'; */
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+  cursor: url('../logos/finger.png'), pointer;
+  padding: 7px;
+  /* font-family: 'Orbitron'; */
+  font-family: 'Space Mono';
+  position: relative;
+  background-color: var(--body-color);
+}
+
+.nav-menu-item {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* .nav-menu-item [aria-current="page"] {
+  color: #D747EB;
+} */
+
+@property  --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.nav-menu-item:hover::after, .nav-menu-item:hover::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), transparent 70%, var(--accent-color));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 1.5px;
+  border-radius: 3px;
+  animation: 2s spin linear infinite;
+}
+
+.nav-menu-item:hover::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  } 
+  to {
+    --angle: 360deg;
+  } 
+}
+
+@media (min-width: 340px) and (max-width: 1024px) {
+
+  .header {
+  display: flex;
+  }
+
+  .nav-menu-list {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: flex-end;
+  }
+
+}
