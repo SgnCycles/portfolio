@@ -5,10 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/typography.css">
+  <link rel="stylesheet" href="./styles/mobile_menu.css">
+  <link rel="icon" type="image/x-icon" href="./logos/bicycle.png">
+  <script src="./scripts/navigation_menu.js" defer></script>
   <script src="./scripts/javascript.js" defer></script>
   <title>Signe's Portfolio</title>
 </head>
 <body>
-  
+  <header class="header">
+    <a class="header-logo" href="/#home">
+      <img src="./logos/bicycle.png" width="50px" height="auto">
+    </a>
+    <nav class="nav-wrapper" id="mobile-nav">
+      <ul class="nav-menu-list">
+        <li><a class="nav-menu-item" aria-current="true" href="/#home">Home</a></li>
+        <li><a class="nav-menu-item" aria-current="false" href="/#about">About</a></li>
+        <li><a class="nav-menu-item" aria-current="false" href="/#projects">Projects</a></li>
+        <li><a class="nav-menu-item" aria-current="false" href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+  <footer class="footer"></footer>
 </body>
 </html>
