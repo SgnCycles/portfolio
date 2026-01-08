@@ -213,3 +213,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Tourney Condensed';
+  src: url('../fonts/tourney/TourneyCondensed-ThinItalic.woff2') format('woff2'),
+      url('../fonts/tourney/TourneyCondensed-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}

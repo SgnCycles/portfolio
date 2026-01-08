@@ -73,7 +73,7 @@
 
   .nav-menu-list.active {
     display: flex;
-    padding-top: 5rem;
+    padding-top: 6rem;
     opacity: 1;
     transform: translateY(0);
     justify-content: flex-start;
