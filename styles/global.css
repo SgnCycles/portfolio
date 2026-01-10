@@ -5,11 +5,9 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html {
+html, body {
   height: 100dvh;
 }
 
@@ -17,12 +15,13 @@ body {
   background-color: var(--body-color);
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 .header {
   width: 100%;
   display: flex;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .nav-wrapper {
@@ -34,7 +33,7 @@ body {
 }
 
 .header-logo {
-  flex: 40%;
+  flex: 20%;
   padding-left: 2%;
   margin: auto;
   cursor: url('../logos/finger.png'), pointer;
@@ -45,7 +44,10 @@ body {
 }
 
 .header-logo:hover {
-  color: var(--accent-color);
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(270deg, #d747eb, #b30048);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .nav-menu-list {
@@ -114,72 +116,11 @@ body {
 }
 
 .main {
-  height: 80dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-intro-section {
-  border-radius: 15px;
-  height: 70%;
-  display: flex;
-  position: relative;
-  width: 90%;
-  background-color: rgb(0,0,0);
-}
-
-.intro-image-container, .intro-layer, .intro-text {
-  position: absolute;
-}
-
-.intro-image-container {
-  border-radius: 15px 15px 15px 0;
-  background-image: url(../images/test_image.jpg);
-  background-size: cover;
-  height: 100%;
-  width: 50%;
-  z-index: 10;
-  clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
-  right: 0;
-}
-
-.intro-layer {
-  right: 0;
-  width: 60%;
-  height: 100%;
-  z-index: 15;
-  background-color: rgba(0,0,0, 0.5);
-  transform: translate(-35%);
-  clip-path: polygon(0 0, 87% 0, 69% 79%, 0 79%);
-}
-
-.intro-text {
-  width: 60%;
-  height: 100%;
-  z-index: 100;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  text-wrap: nowrap;
-  padding-left: 20px;
-  gap: 2rem;
-}
-
-.intro-subtitle {
-  color: var(--accent-color);
-  font-weight: 100;
-  font-family: 'Tourney Condensed';
-  font-style: italic;
-  font-size: 3rem;
-}
-
-.intro-paragraph {
-  color: #B9B9B9;
-  font-family: 'Space Mono';
-  text-wrap: wrap;
-  font-size: 1.3rem;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
 @media (min-width: 340px) and (max-width: 1024px) {
@@ -196,17 +137,5 @@ body {
 
   .nav-menu-item {
     background-color: transparent;
-  }
-
-  .intro-text {
-    text-wrap: wrap;
-  }
-
-  .intro-subtitle{
-    font-size: 3rem;
-  }
-
-  .intro-paragraph {
-    font-size: 1rem;
   }
 }
