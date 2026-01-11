@@ -1,6 +1,6 @@
 .main-intro-section {
   border-radius: 15px;
-  min-height: 85dvh;
+  min-height: calc(100dvh - var(--header-height-desktop));
   display: flex;
   position: relative;
   width: 90%;
@@ -58,17 +58,11 @@
   font-family: 'Space Mono';
   text-wrap: wrap;
   font-size: 1.3rem;
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
-
 
 @media (min-width: 340px) and (max-width: 1024px) {
 
-  .main-intro-section {
-    height: 91dvh;
-    min-height: none;
-  }
-  
   .intro-text {
     text-wrap: wrap;
   }
