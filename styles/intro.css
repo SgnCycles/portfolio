@@ -1,5 +1,5 @@
 .main-intro-section {
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   min-height: calc(100dvh - var(--header-height-desktop));
   display: flex;
   position: relative;
