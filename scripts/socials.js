@@ -25,6 +25,7 @@ socialMediaIconsContainer.forEach(icon => {
 
   image.src = icon.image;
   link.href = icon.link;
+  link.target = '_blank';
   description.textContent = icon.description;
 
   link.appendChild(image);
