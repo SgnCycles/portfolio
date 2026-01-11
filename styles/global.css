@@ -1,10 +1,12 @@
 :root {
   --body-color: #070915;
   --accent-color: #d747eb;
+  --font-color-primary: #edf1f1;
   --header-height-desktop: 100px;
   --footer-height-desktop: 80px;
   --header-height-mobile: 70px;
   --footer-height-mobile: 70px;
+  --border-radius: 15px;
 }
 
 * {
@@ -129,8 +131,19 @@ cursor: url('../logos/finger.png'), pointer;
 }
 
 .footer {
-  height: 80px;
+  height: var(--footer-height-desktop);
+  background-color: none;
+  color: #edf1f1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  font-family: 'Orbitron';
+  letter-spacing: 3px;
+  font-size: 0.7rem;
 }
+
 @media (min-width: 340px) and (max-width: 1024px) {
 
   .header {
