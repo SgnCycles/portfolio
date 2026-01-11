@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 90%;
   color: #dad6d6;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .social-media {
-  border-radius: var(--border-radius);
+  border-radius: 15px;
   background-color: rgba(84, 21, 112, 0.4);
   width: 30%;
   padding: 20px;
