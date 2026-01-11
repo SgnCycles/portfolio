@@ -1,6 +1,10 @@
 :root {
   --body-color: #070915;
   --accent-color: #d747eb;
+  --header-height-desktop: 100px;
+  --footer-height-desktop: 80px;
+  --header-height-mobile: 70px;
+  --footer-height-mobile: 70px;
 }
 
 * {
@@ -8,20 +12,20 @@
 }
 
 html, body {
-  height: 100dvh;
+  height: 100%;
+  margin: 0;
 }
 
 body {
   background-color: var(--body-color);
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 .header {
   width: 100%;
   display: flex;
-  margin: 30px 0;
+  height: var(--header-height-desktop);
 }
 
 .nav-wrapper {
@@ -32,11 +36,14 @@ body {
   place-items: center;
 }
 
+.header-logo, .nav-menu-item {
+cursor: url('../logos/finger.png'), pointer;
+}
+
 .header-logo {
   flex: 20%;
   padding-left: 2%;
   margin: auto;
-  cursor: url('../logos/finger.png'), pointer;
   text-decoration: none;
   color: #c2c6c7;
   font-family: 'Orbitron';
@@ -60,13 +67,12 @@ body {
 }
 
 .nav-menu-item {
+  font-family: 'Space Mono';
   /* font-family: 'Google Sans Code'; */
+  /* font-family: 'Orbitron'; */
   font-weight: normal;
   letter-spacing: 0.3rem;
-  cursor: url('../logos/finger.png'), pointer;
   padding: 7px;
-  /* font-family: 'Orbitron'; */
-  font-family: 'Space Mono';
   position: relative;
   background-color: var(--body-color);
 }
@@ -119,14 +125,17 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
+.footer {
+  height: 80px;
+}
 @media (min-width: 340px) and (max-width: 1024px) {
 
   .header {
-  display: flex;
+    display: flex;
+    height: var(--header-height-mobile);
   }
 
   .nav-menu-list {
@@ -137,5 +146,9 @@ body {
 
   .nav-menu-item {
     background-color: transparent;
+  }
+
+  .footer {
+    height: var(--footer-height-mobile);
   }
 }

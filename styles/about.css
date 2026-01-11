@@ -1,5 +1,5 @@
 .about-container {
-  padding-top: 30px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,6 @@
 }
 
 .about-card {
-  width: 90%;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
@@ -17,11 +16,9 @@
   grid-template-areas: 
   "info image"
   "contact-title contact-title"
-  "social social"
-  ;
+  "social social";
   background-color: rgb(0,0,0);
   border-radius: 15px;
-  padding-top: 1rem;
 }
 
 .about-image {
@@ -35,18 +32,19 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  filter: grayscale(80%);
 }
 
 .filter-strip {
   position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  background: rgba(237, 47, 48, 0.6);
-  backdrop-filter: invert(70%);
+  top: 30%;
+  left: 22%;
+  width: 50%;
+  height: 40%;
+  background: rgb(84, 21, 112, 0.4);
+  backdrop-filter: invert(90%);
   z-index: 10;
-  transform: rotate(10deg);
+  clip-path: polygon(0 13%, 100% 35%, 100% 60%, 0 36%);
 }
 
 .about-info {
@@ -65,6 +63,7 @@
 
 .about-subtitle {
   text-align: center;
+  font-size: 2rem;
 }
 
 .about-info {
@@ -92,13 +91,18 @@
 
 .social-media {
   border-radius: 15px;
-  background-color: #541570;
+  background-color: rgba(84, 21, 112, 0.4);
   width: 30%;
   padding: 20px;
   position: relative;
   display: flex;
   text-align: center;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.social-media:hover {
+  border: 2px solid #d747eb;
 }
 
 .social-media:hover .social-image {
@@ -137,6 +141,10 @@
   .about-image {
     padding-top: 15px;
   }
+
+  .about-image img{
+    height: 250px;
+}
 
   .about-card {
     display: flex;
